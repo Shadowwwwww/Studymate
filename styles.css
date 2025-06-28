@@ -1,0 +1,6 @@
+.option-box input:checked + span {
+  color: white;
+  background-color: #4f46e5;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+}

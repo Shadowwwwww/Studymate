@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ subject.capitalize() }} - Class {{ class_number }}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">{{ subject.capitalize() }} - Class {{ class_number }}</h1>
+    <div class="bg-white p-6 rounded-xl shadow mb-6 whitespace-pre-wrap text-gray-800">
+      {{ note }}
+    </div>
+
+    <h2 class="text-xl font-semibold mb-4">Choose Chapter to Try Quizzes:</h2>
+
+    <div class="space-y-6">
+      <!-- Example with 2 chapters; add more as needed -->
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Chapter 1</h3>
+        <div class="space-x-3">
+          <a href="/quiz/{{ class_number }}/{{ subject }}/ch1/easy" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Easy</a>
+          <a href="/quiz/{{ class_number }}/{{ subject }}/ch1/medium" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg">Medium</a>
+          <a href="/quiz/{{ class_number }}/{{ subject }}/ch1/hard" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">Hard</a>
+          <a href="/quiz/{{ class_number }}/{{ subject }}/ch1/impossible" class="bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded-lg">Impossible</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Chapter 2</h3>
+        <div class="space-x-3">
+          <a href="/quiz/{{ class_number }}/{{ subject }}/ch2/easy" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">Easy</a>
+          <a href="/quiz/{{ class_number }}/{{ subject }}/ch2/medium" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg">Medium</a>
+          <a href="/quiz/{{ class_number }}/{{ subject }}/ch2/hard" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg">Hard</a>
+          <a href="/quiz/{{ class_number }}/{{ subject }}/ch2/impossible" class="bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded-lg">Impossible</a>
+        </div>
+      </div>
+
+      <!-- Add more chapters similarly -->
+    </div>
+
+    <p class="mt-8"><a href="/class/{{ class_number }}" class="text-blue-600 hover:underline">&larr; Back to Subjects</a></p>
+  </div>
+</body>
+</html>

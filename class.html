@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Class {{ class_number }} Subjects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-gradient-to-r from-sky-100 to-indigo-100 min-h-screen flex items-center justify-center p-6">
+  <div class="bg-white shadow-xl rounded-2xl p-8 max-w-lg w-full text-center">
+    <h1 class="text-4xl font-extrabold mb-6 text-indigo-700">Class {{ class_number }} Subjects</h1>
+    <div class="space-y-4">
+      <a href="/class/{{ class_number }}/science" class="block bg-indigo-500 hover:bg-indigo-600 text-white py-3 rounded-xl text-xl font-semibold transition">🔬 Science</a>
+      <a href="/class/{{ class_number }}/math" class="block bg-indigo-500 hover:bg-indigo-600 text-white py-3 rounded-xl text-xl font-semibold transition">📐 Math</a>
+      <a href="/class/{{ class_number }}/english" class="block bg-indigo-500 hover:bg-indigo-600 text-white py-3 rounded-xl text-xl font-semibold transition">📚 English</a>
+    </div>
+    <p class="mt-8">
+      <a href="/" class="text-indigo-700 hover:underline font-medium">&larr; Back to Home</a>
+    </p>
+  </div>
+</body>
+</html>
